@@ -1,0 +1,14 @@
+Initialize an open set (priority queue) with the initial state and its cost function f(n)
+Initialize a closed set (hash set) to keep track of visited states
+
+While the open set is not empty:
+    Pop the state with the lowest cost function from the open set (call it current state)
+    If this state is the goal state, return its actual cost g(n) (this is the shortest path cost)
+    Add this state to the closed set
+    For each neighbor state that can be reached by moving the blank tile:
+        Calculate the cost function f(n) for the neighbor state
+        If this state is not in the closed set or its cost function is lower than the previously calculated cost:
+            Update its cost function
+            If it's not in the open set, add it to the open set
+
+If the open set is empty (all states have been visited), and we have not found the goal state, return that there is no solution

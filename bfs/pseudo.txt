@@ -1,0 +1,14 @@
+Create an empty queue Q and enqueue the initial state
+Create an empty set or hash set visited and add the initial state
+Set depth to 0
+
+While Q is not empty
+  For each state in Q at the current depth
+    If the state is the goal state, return depth
+    For each child state obtained by moving the blank tile up, down, left, or right
+      If the child state is not in visited
+        Add the child state to visited
+        Enqueue the child state
+  Increment depth
+
+If the goal state was not found, return -1 or some error value
