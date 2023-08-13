@@ -7,7 +7,9 @@ There is one empty space that an adjacent tile can be slid into. An alternative 
 
 The transition below illustrates the blank tile being moved to the right.
 
-[ ##### image #### ]
+
+![puzzle-example](https://github.com/Lindelani-3/15puzzleSearch/assets/99859713/4b6963ed-11bb-4b2d-8a39-d0667de6e469)
+
 
 Above Figure: Starting in configuration (a), the agent executes the action right. This moves the blank tile to the right, exchanging its position with F, as seen in (b).
 The cost of each move is 1 and the goal of the game is to slide the tiles around to reach some goal configuration, which we will take to be the letters in alphabetical order, with the bottom right corner housing the blank slot.
