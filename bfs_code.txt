@@ -1,0 +1,80 @@
+#include <iostream>
+#include <queue>
+#include <unordered_set>
+#include <string>
+
+int solve(const std::string& initialState, const std::string& goalState) {
+    std::queue<std::string> q;
+    std::unordered_set<std::string> visited;
+
+    // Create an empty queue Q and enqueue the initial state
+    q.push(initialState);
+    // Create an empty set or hash set visited and add the initial state
+    visited.insert(initialState);
+    // Set depth to 0
+    int depth = 0;
+
+    while (!q.empty()) {
+        int size = q.size();
+        // For each state in Q at the current depth
+        for (int i = 0; i < size; i++) {
+            std::string state = q.front();
+            q.pop();
+            // If the state is the goal state, return depth
+            if (state == goalState) {
+                return depth;
+            }
+            // For each child state obtained by moving the blank tile up, down, left, or right
+            int pos = state.find("#");
+            int x = pos / 4, y = pos % 4;
+            if (x > 0) {
+                std::string childState = state;
+                std::swap(childState[pos], childState[pos - 4]);
+                // If the child state is not in visited
+                if (visited.count(childState) == 0) {
+                    // Add the child state to visited
+                    visited.insert(childState);
+                    // Enqueue the child state
+                    q.push(childState);
+                }
+            }
+            if (x < 3) {
+                std::string childState = state;
+                std::swap(childState[pos], childState[pos + 4]);
+                if (visited.count(childState) == 0) {
+                    visited.insert(childState);
+                    q.push(childState);
+                }
+            }
+            if (y > 0) {
+                std::string childState = state;
+                std::swap(childState[pos], childState[pos - 1]);
+                if (visited.count(childState) == 0) {
+                    visited.insert(childState);
+                    q.push(childState);
+                }
+            }
+            if (y < 3) {
+                std::string childState = state;
+                std::swap(childState[pos], childState[pos + 1]);
+                if (visited.count(childState) == 0) {
+                    visited.insert(childState);
+                    q.push(childState);
+                }
+            }
+        }
+        // Increment depth
+        depth++;
+    }
+
+    // If the goal state was not found, return -1 or some error value
+    return -1;
+}
+
+int main() {
+    std::string initialState = "1234#5678";
+    std::string goalState = "12345678#";
+    int result = solve(initialState, goalState);
+    std::cout << "Result: " << result << "\n";
+    return 0;
+}
