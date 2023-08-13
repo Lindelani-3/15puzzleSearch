@@ -35,7 +35,7 @@ Input consists of a single string of characters and the hash symbol. The positio
 
 ## Search Algorithms
   
-  Breadth First Search
+  Breadth-First Search
   
   A* Search H1 (Misplaced Tiles Heuristic)
   
@@ -43,4 +43,4 @@ Input consists of a single string of characters and the hash symbol. The positio
 
 ## Findings
 
-[ #### image of graph and csv file #### ]
+![analysis-prev](https://github.com/Lindelani-3/15puzzleSearch/assets/99859713/28a3866c-4e58-4794-aed3-4a86bef80b73)
