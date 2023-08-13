@@ -43,5 +43,5 @@ Input consists of a single string of characters and the hash symbol. The positio
 
 ## Findings
 
-![analysis-prev-ii](https://github.com/Lindelani-3/15puzzleSearch/assets/99859713/531b5f8c-6205-4a8f-beff-511f4dc140d1)
+![analysis-prev](https://github.com/Lindelani-3/15puzzleSearch/assets/99859713/090674f1-0fd5-44bc-a70a-1ad11f4a1313)
 
