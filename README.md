@@ -10,4 +10,26 @@ The transition below illustrates the blank tile being moved to the right.
 [ ##### image #### ]
 
 Above Figure: Starting in configuration (a), the agent executes the action right. This moves the blank tile to the right, exchanging its position with F, as seen in (b).
-The cost of each move is 1 and the goal of the game is to slide the tiles around to reach some goal configuration, which we will take to be the letters in alphabetical order, with the bottom right corner housing the blank slot as seen below:
+The cost of each move is 1 and the goal of the game is to slide the tiles around to reach some goal configuration, which we will take to be the letters in alphabetical order, with the bottom right corner housing the blank slot.
+
+
+## Problem Structure:
+Input consists of a single string of characters and the hash symbol. The position of the characters in the string is its location on the board, starting from top-left and moving to bottom right. The hash represents the blank space. For example, the string ABEHCD#FGILMJKON.
+
+  Objective: Obtain shortest path from the initial state to the goal state
+  Initial State: Input position string
+  States: All possible valid position strings
+  Actions: [Left, Right, Up, Down]
+  Transition Function:
+  Cost Function:
+  Goal: End Game string ABCDEFGHIJKLMNO#
+
+
+## Search Algorithms
+  Breadth First Search
+  A* Search H1 (Misplaced Tiles Heuristic)
+  A* Search H2 (Manhattan Distance)
+
+## Findings
+
+[ #### image of graph and csv file #### ]
