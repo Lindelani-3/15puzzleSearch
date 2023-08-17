@@ -26,10 +26,6 @@ Input consists of a single string of characters and the hash symbol. The positio
   
   Actions: [Left, Right, Up, Down]
   
-  Transition Function:
-  
-  Cost Function:
-  
   Goal: End Game string ABCDEFGHIJKLMNO#
 
 
