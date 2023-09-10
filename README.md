@@ -41,3 +41,4 @@ Input consists of a single string of characters and the hash symbol. The positio
 
 ![analysis-prev](https://github.com/Lindelani-3/15puzzleSearch/assets/99859713/090674f1-0fd5-44bc-a70a-1ad11f4a1313)
 
+As expected, the Breadth First Search algorithm seemed to have expanded the most nodes in it's traversal through the search tree for a solution. The heuristic searches were able to look through way fewer states in comparison.
